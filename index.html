@@ -1,7 +1,1850 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TI-84 Plus CE | Section 4.2 Practice</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#142a49;background:#f1f5fa}header{background:#152a4a;color:white;padding:18px 3%}header h1{margin:0;font-size:28px}header p{margin:7px 0 0}.wrap{max-width:1450px;margin:18px auto;padding:0 16px}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(330px,520px);gap:22px}.panel{min-width:0;background:white;border:1px solid #cedbe8;border-radius:16px;padding:22px}.eyebrow{font-size:14px;font-weight:800;color:#195da5;letter-spacing:.06em}.instruction{font-size:21px;line-height:1.45}.hint{background:#eaf3fc;border-left:5px solid #2566ac;padding:14px;line-height:1.5}.calc{background:#22272d;border:5px solid #0f1419;border-radius:36px;padding:16px 24px;max-width:440px;margin:auto;box-shadow:0 9px 22px #0003}.brand{text-align:center;color:white;font-size:20px;font-weight:bold;margin:0 0 12px}.screen{background:#cbd5ce;border:8px solid #090d0e;border-radius:12px;height:185px;padding:10px;font:16px/1.45 monospace;white-space:pre-wrap;overflow:auto;color:#101d18}.screen .status{font-size:11px;border-bottom:1px solid #8d9d93;margin-bottom:7px}.keys{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin-top:15px}.key{min-height:43px;border:2px solid #11171e;border-radius:9px;background:#535d68;color:white;font-size:13px;font-weight:800;cursor:pointer}.key.top{background:#e1e6eb;color:#101820}.key.blue{background:#176ec0}.key.green{background:#53a21b}.key.active{outline:4px solid #ffcc32;outline-offset:2px;box-shadow:0 0 0 6px #ffcc3244}.key.pressed{background:#f7cf43;color:#151515}.controls{display:flex;justify-content:space-between;margin:20px 0;gap:15px}button.nav,button.check{background:#195da5;color:white;border:0;border-radius:9px;padding:12px 24px;font-size:17px;font-weight:bold;cursor:pointer}button:disabled{opacity:.45;cursor:default}input{font-size:20px;padding:12px;width:100%;border:2px solid #aabdd1;border-radius:9px}.feedback{min-height:30px;font-weight:700}.correct{color:#086e35}.wrong{color:#9a2525}.stepcount{font-weight:bold;color:#195da5}@media(max-width:900px){.layout{grid-template-columns:1fr}.panel{padding:15px}} .intro{background:white;border:1px solid #cedbe8;border-radius:16px;padding:28px}.intro h2{font-size:30px;margin:8px 0}.intro p{line-height:1.45}.intro-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(330px,.9fr);gap:28px}.problem-questions{font-size:19px;line-height:1.55}.dataset{border-collapse:collapse;width:100%;font-size:15px}.dataset th,.dataset td{border-bottom:1px solid #dce5ee;padding:5px 9px;text-align:left}.dataset th{background:#eaf3fc}.intro button{background:#195da5;color:white;border:0;border-radius:9px;padding:15px 24px;font-size:19px;font-weight:bold;cursor:pointer}.intro button:focus-visible{outline:3px solid #f4b400;outline-offset:3px}@media(max-width:900px){.intro-grid{grid-template-columns:1fr}}button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #195da5;outline-offset:3px} .controls{flex-wrap:wrap} #reference{background:white;padding:16px;border-radius:12px} #reference summary{cursor:pointer;font-weight:bold} @media(max-width:480px){.calc{padding:12px}.key{font-size:11px}.intro{padding:15px}}
-[hidden]{display:none!important}.calc{max-width:370px;background:linear-gradient(110deg,#41464c,#20242a 55%,#33383e);border:3px solid #14171b;border-radius:28px 28px 42px 42px;padding:22px 20px 30px;box-shadow:inset 0 0 0 3px #555b62,0 10px 20px #0003}.brand{font-style:italic;color:#e5e8eb;text-align:left;font-size:20px}.screen{background:#fff;color:#14234d;border:12px solid #11151a;border-radius:5px;height:auto;min-height:235px;aspect-ratio:1.28;padding:6px;font: bold 14px/1.35 monospace;overflow:auto;white-space:normal}.screen .status{background:#434b61;color:white;font-size:10px;white-space:nowrap;padding:3px;margin:0 0 5px}.screen #screenText{white-space:pre-wrap;overflow-wrap:anywhere;min-height:160px}.screen svg{display:block;width:100%;height:auto}.keys{gap:8px 6px;grid-template-columns:repeat(5,minmax(0,1fr));margin-top:16px}.key{min-height:33px;border-radius:5px 5px 9px 9px;background:linear-gradient(#41464d,#171a1e);box-shadow:0 2px 1px #000;color:#fff;font-size:11px;padding:2px}.key.top,.key.num{background:linear-gradient(#f6f5ef,#c9c8c1);color:#15191d}.key.blue{background:#1766a0}.key.green{background:#60882a}.key.active{outline:3px solid #ffdc36;outline-offset:1px;box-shadow:none}.key.pressed{background:#f7cf43;color:#151515}.key.arrow{background:#b6bbc0;color:#15191d;border-radius:50%;}.key.blank{visibility:hidden}.keylabel{display:block;color:#a9d6ff;font-size:9px;text-align:center;min-height:12px}.keycell{min-width:0;display:flex;flex-direction:column}.keycell .key{width:100%}.keycell:has(.blank){visibility:hidden}
-</style></head><body><header><h1>TI-84 Plus CE • Building Linear Models from Data</h1><p>MAC 1105 • Section 4.2 • Dr. Fitzroy Farquharson • Valencia College</p></header><main class="wrap"><section id="intro" class="intro" aria-labelledby="intro-title"><div class="eyebrow">SECTION 4.2 • EXAMPLE 4</div><h2 id="intro-title">Finding the Line of Best Fit for Linearly Related Data</h2><p><strong>The problem:</strong> The table shows 2017 National League baseball teams' on-base percentage, <em>x</em>, and runs scored, <em>y</em>. Use these data to answer all four parts of Example 4.</p><div class="intro-grid"><div><h3>Questions</h3><div class="problem-questions"><p><strong>(a)</strong> Use a graphing utility to find the <strong>line of best fit</strong> that models the relation between on-base percentage and runs scored.</p><p><strong>(b)</strong> Graph the line of best fit on the scatter plot obtained in the first example.</p><p><strong>(c)</strong> Interpret the slope.</p><p><strong>(d)</strong> Use the line of best fit to predict the number of runs a team will score if its on-base percentage is <strong>32.2</strong>.</p></div><p class="hint"><strong>Before you begin:</strong> You will enter the 15 on-base percentages into L1 and the corresponding runs scored into L2. Keep each team's two values in the same row.</p><button type="button" onclick="startTutorial()">Begin TI-84 Plus CE Tutorial →</button></div><div><h3>Data from Example 3 / Example 4</h3><table class="dataset"><thead><tr><th>Team</th><th>L1: x (%)</th><th>L2: y (runs)</th></tr></thead><tbody><tr><td>Arizona</td><td>32.9</td><td>812</td></tr><tr><td>Atlanta</td><td>32.6</td><td>732</td></tr><tr><td>Chicago Cubs</td><td>33.8</td><td>822</td></tr><tr><td>Cincinnati</td><td>32.9</td><td>753</td></tr><tr><td>Colorado</td><td>33.8</td><td>824</td></tr><tr><td>LA Dodgers</td><td>33.4</td><td>770</td></tr><tr><td>Miami</td><td>33.1</td><td>778</td></tr><tr><td>Milwaukee</td><td>32.2</td><td>732</td></tr><tr><td>NY Mets</td><td>32.0</td><td>735</td></tr><tr><td>Philadelphia</td><td>31.5</td><td>690</td></tr><tr><td>Pittsburgh</td><td>31.8</td><td>668</td></tr><tr><td>San Diego</td><td>29.9</td><td>604</td></tr><tr><td>San Francisco</td><td>30.9</td><td>639</td></tr><tr><td>St. Louis</td><td>33.4</td><td>761</td></tr><tr><td>Washington</td><td>33.2</td><td>819</td></tr></tbody></table><p style="font-size:13px;color:#52647a">Source noted in the original textbook slide: espn.com (2017 data).</p></div></div></section><div id="tutorial" hidden><p id="counter" class="stepcount" aria-live="polite"></p><div class="layout"><section class="panel"><div class="eyebrow">GUIDED PRACTICE • EXAMPLE 4</div><p style="font-size:15px;color:#52647a">Goal: Find and graph the line of best fit, interpret its slope, and predict runs at x = 32.2.</p><h2 id="title"></h2><p id="question" class="instruction"></p><div class="eyebrow">ACTION → SCREEN RESPONSE → CHECK</div><p class="hint" id="instruction"></p><p><strong>1.</strong> Follow the action instructions. <strong>2.</strong> Compare your TI-84 screen with the simulated display at right. <strong>3.</strong> Answer the checkpoint question below. Yellow outlines identify relevant keys, not their order. Follow the written sequence on your physical calculator. Type your checkpoint answer in the box below, then select Check answer. The illustration is a guided reference, not a working calculator emulator.</p><p id="pressed" aria-live="polite"></p><label for="answer" id="ask" style="font-weight:bold;display:block;margin:16px 0 8px"></label><input id="answer" autocomplete="off" aria-describedby="answerHelp"><p id="answerHelp" style="font-size:14px;color:#52647a;margin:7px 0">Enter the answer shown or implied by the calculator display at right—not the name of the key you pressed.</p><p><button class="check" onclick="check()">Check answer</button></p><p id="feedback" class="feedback" aria-live="polite"></p></section><section class="panel"><div class="calc" aria-label="TI-84 Plus CE calculator practice illustration"><div class="brand">TI-84 Plus CE</div><div class="screen"><div class="status">NORMAL FLOAT AUTO REAL &nbsp; ▰</div><div id="screenText"></div></div><div id="keys" class="keys"></div></div><p style="font-size:13px;text-align:center">Calculator-style practice interface. Menu screens can differ by TI-84 operating-system version.</p></section></div><nav class="controls"><button class="nav" id="prev" onclick="move(-1)">← Back</button><button class="nav" id="next" onclick="move(1)">Next →</button></nav></div><details id="reference" hidden><summary>View the complete baseball data table</summary><div id="referenceTable"></div></details></main><footer style="text-align:center;padding:24px;line-height:1.5">© 2026 Dr. Fitzroy Farquharson, Valencia College. All Rights Reserved.<br>Educational tutorial for authorized course use. Original textbook data attribution retained above.</footer><script>const data=[{"title": "Open the STAT menu", "question": "Press the physical STAT key.", "keys": ["STAT"], "screen": "STAT  EDIT   CALC  TESTS\n>1:Edit\n 2:SortA(\n 3:SortD(", "instruction": "Press the physical STAT key. Check: The EDIT menu is open, with 1:Edit selected.", "ask": "Look at the STAT menu on the calculator screen. Which numbered menu option is selected to open the list editor? (Enter the number and name, for example 1:Edit.)", "answer": "1:Edit", "help": "Enter the menu number or name."}, {"title": "Open the list editor", "question": "Press ENTER while 1:Edit is selected.", "keys": ["ENTER"], "screen": "   L1      L2      L3\n   ---     ---     ---\n   1:      1:", "instruction": "Press ENTER while 1:Edit is selected. If old data are present, highlight the L1 heading, press CLEAR then ENTER; repeat for L2. Do not press DEL on a list heading.", "ask": "After opening the list editor, which two column headings will you use for the on-base percentages (x) and runs scored (y)?", "answer": "L1 and L2", "help": "Enter L1 and L2."}, {"title": "Enter the first paired values", "question": "Enter 32.9 in L1 row 1 and press ENTER.", "keys": ["3", "2", ".", "9", "8", "1", "ENTER", "◀", "▶", "↑"], "screen": "   L1      L2      L3\n1  32.9    812\n2  32.6    732\n3  33.8    822", "instruction": "Enter 32.9 in L1 row 1 and press ENTER. Move to L2 row 1, enter 812 and press ENTER. Keep both values in row 1.", "ask": "What is the first ordered pair?", "answer": "(32.9, 812)", "help": "Enter an ordered pair, e.g. (1, 2)."}, {"title": "Complete both data lists", "question": "Enter the remaining pairs from the data table below.", "keys": ["STAT", "ENTER"], "screen": "   L1      L2      L3\n1  32.9    812\n2  32.6    732\n3  33.8    822\n...\n14 33.4    761\n15 33.2    819", "instruction": "Enter the remaining pairs from the data table below. Use the arrow keys to navigate. Verify that each list has exactly 15 entries.", "ask": "How many values must be in each list?", "answer": "15", "help": "Enter a whole number."}, {"title": "Verify before continuing", "question": "Use the arrow keys to scroll through L1 and L2. Compare the first, middle, and last rows with the table.", "keys": ["↑", "↓", "◀", "▶"], "screen": "VERIFY YOUR LISTS\nrow 1:  32.9 | 812\nrow 8:  32.2 | 732\nrow 15: 33.2 | 819\n15 pairs in BOTH lists", "instruction": "Use the arrow keys to scroll through L1 and L2. Compare the first, middle, and last rows with the table. STOP & CHECK: Do not continue until both lists have 15 matching pairs.", "ask": "What is the pair for Milwaukee (row 8)?", "answer": "(32.2, 732)", "help": "Enter the ordered pair (x, y)."}, {"title": "Turn on the scatter plot", "question": "Press Y= and clear or deselect any old equations.", "keys": ["2nd", "Y=", "1", "ENTER"], "screen": "STAT PLOTS\n1:Plot1   On\nType: scatter\nXlist: L1\nYlist: L2", "instruction": "Press Y= and clear or deselect any old equations. Press 2nd then Y= (STAT PLOT). Turn off Plot2 and Plot3 if active. Select Plot1, highlight On and press ENTER. Choose the first plot type (scatter). Set Xlist to L1 (2nd then 1) and Ylist to L2 (2nd then 2).", "ask": "On the STAT PLOT setup screen, which list should be assigned to Ylist (runs scored)?", "answer": "L2", "help": "Enter the list name."}, {"title": "View the scatter plot", "question": "Press ZOOM, then 9 (ZoomStat).", "keys": ["ZOOM", "9"], "screen": "ZOOM\n9:ZoomStat\n\n[Scatter plot appears]", "instruction": "Press ZOOM, then 9 (ZoomStat). Check: The scatter plot has a positive, roughly linear pattern.", "ask": "Which numbered ZOOM menu option automatically fits the window to the statistical data? (Enter its number.)", "answer": "9", "help": "Enter the menu number."}, {"title": "Enable diagnostics", "question": "Press 2nd then 0 (CATALOG).", "keys": ["2nd", "0", "↑", "↓", "ENTER"], "screen": "CATALOG\nDiagnosticOn\n\nDone", "instruction": "Press 2nd then 0 (CATALOG). Scroll to DiagnosticOn. Press ENTER to paste the command onto the home screen, then ENTER again to execute it. The screen displays Done. This enables r and r² for subsequent regression calculations.", "ask": "Which command enables r and r²?", "answer": "DiagnosticOn", "help": "Type the command name, not Done or ENTER. Spaces and capitalization do not matter."}, {"title": "Calculate linear regression", "question": "Press STAT, right arrow to CALC, then select 4:LinReg(ax+b).", "keys": ["STAT", "▶", "4", "ENTER"], "screen": "LinReg(ax+b)\na=57.34554128\nb=-1120.747788\nr²=.882277341\nr=.939296194", "instruction": "Press STAT, right arrow to CALC, then select 4:LinReg(ax+b). Set Xlist=L1 and Ylist=L2; leave FreqList blank. Highlight Calculate and press ENTER. On older versions, enter L1,L2 after the command and press ENTER.", "ask": "What is the slope rounded to two decimals?", "answer": "57.35", "help": "Enter the slope rounded to two decimal places."}, {"title": "Store the regression equation", "question": "Repeat STAT → CALC → 4:LinReg(ax+b).", "keys": ["VARS", "ENTER", "GRAPH"], "screen": "LinReg(ax+b)\nXlist: L1\nYlist: L2\nStore RegEQ: Y1", "instruction": "Repeat STAT → CALC → 4:LinReg(ax+b). Set Xlist=L1 and Ylist=L2; leave FreqList blank. Highlight Store RegEQ, press VARS, right arrow to Y-VARS, select 1:Function, then 1:Y1. Highlight Calculate and press ENTER. Press GRAPH to see the fitted line over the scatter plot.", "ask": "Where is the equation stored?", "answer": "Y1", "help": "Enter the equation slot name."}, {"title": "Interpret the slope", "question": "Use the coefficient a in the fitted equation to explain the model.", "keys": [], "screen": "y ≈ 57.35x − 1120.75\n\na ≈ 57.35", "instruction": "Use the coefficient a in the fitted equation to explain the model. Check: An increase of one percentage point in on-base percentage corresponds to about 57.35 more predicted runs.", "ask": "What is the slope of the regression line, rounded to two decimal places?", "answer": "57.35", "help": "Enter the slope rounded to two decimal places."}, {"title": "Make a prediction", "question": "Press 2nd then MODE (QUIT) to return to the home screen.", "keys": ["2nd", "MODE", "VARS", "▶", "1", "3", "2", ".", "(", ")", "ENTER"], "screen": "Y1(32.2)\n725.7786412", "instruction": "Press 2nd then MODE (QUIT) to return to the home screen. Press VARS, right arrow to Y-VARS, select 1:Function then 1:Y1. Type (32.2) and press ENTER. Round the prediction to the nearest whole run.", "ask": "Using the regression equation at x = 32.2, how many runs are predicted, rounded to the nearest whole run?", "answer": "726", "help": "Enter the nearest whole number of runs."}];const rows=[["Y=","WINDOW","ZOOM","TRACE","GRAPH"],["2nd","MODE","DEL","↑", "↓"],["ALPHA","X,T,θ,n","STAT","◀","▶"],["MATH","APPS","PRGM","VARS","CLEAR"],["x⁻¹","SIN","COS","TAN","^"],["x²",",","(",")","÷"],["LOG","7","8","9","×"],["LN","4","5","6","−"],["STO→","1","2","3","+"],["ON","0",".","(-)","ENTER"]];let i=0;let pressed=[];const saved={};const $=id=>document.getElementById(id);function renderScreen(s){const target=$('screenText');target.textContent=s.screen;if(i!==6&&i!==9)return;const ns='http://www.w3.org/2000/svg';const svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 280 155');svg.setAttribute('role','img');svg.setAttribute('aria-label',i===6?'Scatter plot showing positive association':'Scatter plot with fitted regression line');function add(tag,attrs){const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));svg.appendChild(e);return e}const X=x=>12+(x-29)*48,Y=y=>145-(y-550)*.43;add('path',{d:'M12 5 V145 H270',stroke:'#8791a2',fill:'none'});document.querySelectorAll('.dataset tbody tr').forEach(r=>{const x=Number(r.cells[1].textContent),y=Number(r.cells[2].textContent);add('rect',{x:X(x)-2,y:Y(y)-2,width:4,height:4,fill:'#174fc1'})});if(i===9)add('line',{x1:X(29.5),y1:Y(57.34554128*29.5-1120.747788),x2:X(34),y2:Y(57.34554128*34-1120.747788),stroke:'#c52e35','stroke-width':2});target.textContent=i===6?'ZoomStat — scatter plot':'Store RegEQ: Y1\nGRAPH — Plot1 and Y1';target.appendChild(svg);}
-function draw(){let s=data[i];$('counter').textContent=`Screen ${i+1} of ${data.length}`;$('title').textContent=s.title;$('question').textContent=s.question;$('instruction').textContent=s.instruction;renderScreen(s);$('ask').textContent=s.ask;$('answer').value=saved[i]?.value||'';$('answerHelp').textContent=s.help||'Type your answer below.';$('answer').placeholder=i===0?'Example: 1:Edit':'Type your answer here';$('feedback').textContent=saved[i]?.feedback||'';$('feedback').className=saved[i]?.className||'feedback';$('pressed').textContent='';pressed=[];$('prev').disabled=false;$('next').disabled=i===data.length-1;document.querySelectorAll('.key').forEach(b=>{b.classList.toggle('active',s.keys.includes(b.dataset.key));b.classList.remove('pressed')});}function pressKey(b){pressed.push(b.dataset.key);b.classList.add('pressed');$('pressed').textContent='Selected: '+pressed.join(' → ');}function normalize(v){return v.normalize('NFKC').toLowerCase().replace(/[\s\u200b\u200c\u200d\ufeff]/g,'').replace(/−/g,'-');}
-function valid(i,value){const v=normalize(value);if(!v)return false;const aliases={0:['1','edit','1edit','1:edit'],1:['l1andl2','l1,l2','l1&l2','l1/l2','l1l2'],5:['l2','ylist=l2'],6:['9','zoomstat','9:zoomstat','9zoomstat'],7:['diagnosticon','diagnosticon:done'],9:['y1','storeregeq=y1']};if(aliases[i])return aliases[i].includes(v);if(i===2||i===4){const pair=value.normalize('NFKC').trim().replace(/^[([]|[)\]]$/g,'').split(/[,;]|\s+/).filter(Boolean);return pair.length===2&&pair.every(x=>/^\d+(?:\.\d+)?$/.test(x))&&Number(pair[0])===(i===2?32.9:32.2)&&Number(pair[1])===(i===2?812:732);}const n=v.replace(/runs?$/,'');return /^[-+]?\d+(?:\.\d+)?$/.test(n)&&Number(n)===Number(data[i].answer);}
-function check(){const value=$('answer').value;const ok=valid(i,value);const feedback=ok?'Correct. Continue when ready.':!value.trim()?'Enter an answer in the box first.':'Not quite. '+(data[i].help||'Compare the screen with the question.')+' Try again.';$('feedback').textContent=feedback;$('feedback').className='feedback '+(ok?'correct':'wrong');saved[i]={value,feedback,className:$('feedback').className};}
-function startTutorial(){document.getElementById("intro").hidden=true;document.getElementById("tutorial").hidden=false;i=0;$("reference").hidden=false;draw();window.scrollTo(0,0)}function move(n){if(i===0&&n<0){document.getElementById("tutorial").hidden=true;document.getElementById("intro").hidden=false;$("reference").hidden=true;window.scrollTo(0,0);return;}i=Math.max(0,Math.min(data.length-1,i+n));draw()}window.addEventListener('DOMContentLoaded',()=>{$('referenceTable').appendChild(document.querySelector('.dataset').cloneNode(true));$('answer').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();check()}});let holder=$('keys');rows.forEach((row,r)=>row.forEach(k=>{let b=document.createElement('button');b.type='button';b.className='key '+(r===0?'top ':k==='2nd'?'blue ':k==='ALPHA'?'green ':'');b.textContent=k;b.dataset.key=k;b.setAttribute('aria-label','Calculator key '+k);b.onclick=()=>pressKey(b);const cell=document.createElement('div');cell.className='keycell';const label=document.createElement('span');label.className='keylabel';label.textContent=({'Y=':'STAT PLOT','WINDOW':'TBLSET','ZOOM':'FORMAT','TRACE':'CALC','GRAPH':'TABLE','0':'CATALOG','MODE':'QUIT','1':'L1','2':'L2','3':'L3','VARS':'','STAT':'LIST'})[k]||' ';cell.appendChild(label);if(/^[0-9.]$/.test(k))b.classList.add('num');if(['↑','↓','◀','▶'].includes(k))b.classList.add('arrow');if(!k){b.classList.add('blank');b.disabled=true;}cell.appendChild(b);holder.appendChild(cell)}));draw()});</script></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>TI-84 Plus CE | Section 4.2 Practice</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #142a49;
+    background: #f1f5fa;
+}
+
+header {
+    background: #152a4a;
+    color: white;
+    padding: 18px 3%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 7px 0 0;
+}
+
+.wrap {
+    max-width: 1450px;
+    margin: 18px auto;
+    padding: 0 16px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(300px,370px);
+    gap: 22px;
+    align-items: start;
+}
+
+.panel {
+    min-width: 0;
+    background: white;
+    border: 1px solid #cedbe8;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+.eyebrow {
+    font-size: 14px;
+    font-weight: 800;
+    color: #195da5;
+    letter-spacing: .06em;
+}
+
+.instruction {
+    font-size: 21px;
+    line-height: 1.45;
+}
+
+.hint {
+    background: #eaf3fc;
+    border-left: 5px solid #2566ac;
+    padding: 14px;
+    line-height: 1.5;
+}
+
+ol.hint {
+    padding-left: 36px;
+}
+
+.hint li {
+    margin: 0 0 9px;
+}
+
+.hint li:last-child {
+    margin-bottom: 0;
+}
+
+/* TI-84 Plus CE calculator body */
+
+.calc {
+    width: 290px;
+    max-width: 100%;
+    background: linear-gradient(
+        110deg,
+        #41464c,
+        #20242a 55%,
+        #33383e
+    );
+    border: 3px solid #14171b;
+    border-radius: 20px 20px 32px 32px;
+    padding: 17px 15px 25px;
+    margin: auto;
+    box-shadow:
+        inset 0 0 0 3px #555b62,
+        0 10px 20px #0003;
+}
+
+.brand {
+    font-style: italic;
+    color: #e5e8eb;
+    text-align: left;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0 0 12px;
+}
+
+.brand small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+/* Calculator viewing rectangle */
+
+.screen {
+    background: #ffffff;
+    color: #14234d;
+    border: 9px solid #11151a;
+    border-radius: 5px;
+    height: 194px;
+    min-height: 0;
+    padding: 4px;
+    overflow: hidden;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+.screen .status {
+    flex: none;
+    background: #434b61;
+    color: white;
+    font-size: 9px;
+    white-space: nowrap;
+    padding: 3px;
+    margin: 0 0 5px;
+}
+
+.screen #screenText {
+    min-height: 0;
+    flex: 1;
+    white-space: pre;
+    font: bold 12px/1.55 monospace;
+    overflow: hidden;
+    overflow-wrap: normal;
+}
+
+.screen svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Calculator keypad */
+
+.keys {
+    display: grid;
+    grid-template-columns: repeat(5,minmax(0,1fr));
+    gap: 6px 5px;
+    margin-top: 16px;
+}
+
+.key {
+    min-height: 29px;
+    border: 2px solid #11171e;
+    border-radius: 5px 5px 9px 9px;
+    background: linear-gradient(#41464d,#171a1e);
+    box-shadow: 0 2px 1px #000;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.key.top,
+.key.num {
+    background: linear-gradient(#f6f5ef,#c9c8c1);
+    color: #15191d;
+}
+
+.key.blue {
+    background: #1766a0;
+}
+
+.key.green {
+    background: #60882a;
+}
+
+.key.active {
+    outline: 2px solid #ffdc36;
+    outline-offset: 1px;
+    box-shadow: none;
+}
+
+.key.pressed {
+    background: #f7cf43;
+    color: #151515;
+}
+
+.key.arrow {
+    background: #b6bbc0;
+    color: #15191d;
+    border-radius: 50%;
+}
+
+.key.blank {
+    visibility: hidden;
+}
+
+.keylabel {
+    display: block;
+    color: #a9d6ff;
+    font-size: 7px;
+    text-align: center;
+    min-height: 10px;
+}
+
+.keycell {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.keycell .key {
+    width: 100%;
+}
+
+.keycell:has(.blank) {
+    visibility: hidden;
+}
+
+/* Tutorial navigation */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    gap: 15px;
+    flex-wrap: wrap;
+    position: sticky;
+    bottom: 0;
+    background: #f1f5fa;
+    padding: 10px;
+    z-index: 2;
+}
+
+button.nav,
+button.check {
+    background: #195da5;
+    color: white;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 24px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: .45;
+    cursor: default;
+}
+
+input {
+    font-size: 20px;
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #aabdd1;
+    border-radius: 9px;
+}
+
+.feedback {
+    min-height: 30px;
+    font-weight: 700;
+}
+
+.correct {
+    color: #086e35;
+}
+
+.wrong {
+    color: #9a2525;
+}
+
+.stepcount {
+    font-weight: bold;
+    color: #195da5;
+}
+
+/* Introduction and data table */
+
+.intro {
+    background: white;
+    border: 1px solid #cedbe8;
+    border-radius: 16px;
+    padding: 28px;
+}
+
+.intro h2 {
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.intro p {
+    line-height: 1.45;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0,1.1fr) minmax(330px,.9fr);
+    gap: 28px;
+}
+
+.problem-questions {
+    font-size: 19px;
+    line-height: 1.55;
+}
+
+.dataset {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+}
+
+.dataset th,
+.dataset td {
+    border-bottom: 1px solid #dce5ee;
+    padding: 5px 9px;
+    text-align: left;
+}
+
+.dataset th {
+    background: #eaf3fc;
+}
+
+.intro button {
+    background: #195da5;
+    color: white;
+    border: 0;
+    border-radius: 9px;
+    padding: 15px 24px;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reference {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+#reference summary {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Accessibility */
+
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #195da5;
+    outline-offset: 3px;
+}
+
+.intro button:focus-visible {
+    outline: 3px solid #f4b400;
+    outline-offset: 3px;
+}
+
+/* Responsive layout */
+
+@media(max-width:900px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}
+
+@media(max-width:800px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .calc {
+        width: 290px;
+    }
+}
+
+@media(max-width:480px) {
+    .calc {
+        padding: 12px;
+    }
+
+    .intro {
+        padding: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>
+        TI-84 Plus CE • Building Linear Models from Data
+    </h1>
+
+    <p>
+        MAC 1105 • Section 4.2 •
+        Dr. Fitzroy Farquharson • Valencia College
+    </p>
+</header>
+
+<main class="wrap">
+
+<!-- INTRODUCTION -->
+
+<section id="intro"
+         class="intro"
+         aria-labelledby="intro-title">
+
+    <div class="eyebrow">
+        SECTION 4.2 • EXAMPLE 4
+    </div>
+
+    <h2 id="intro-title">
+        Finding the Line of Best Fit for Linearly Related Data
+    </h2>
+
+    <p>
+        <strong>The problem:</strong>
+        The table shows 2017 National League baseball teams'
+        on-base percentage, <em>x</em>, and runs scored,
+        <em>y</em>. Use these data to answer all four parts
+        of Example 4.
+    </p>
+
+    <div class="intro-grid">
+
+        <div>
+
+            <h3>Questions</h3>
+
+            <div class="problem-questions">
+
+                <p>
+                    <strong>(a)</strong>
+                    Use a graphing utility to find the
+                    <strong>line of best fit</strong>
+                    that models the relation between
+                    on-base percentage and runs scored.
+                </p>
+
+                <p>
+                    <strong>(b)</strong>
+                    Graph the line of best fit on the
+                    scatter plot obtained in the first example.
+                </p>
+
+                <p>
+                    <strong>(c)</strong>
+                    Interpret the slope.
+                </p>
+
+                <p>
+                    <strong>(d)</strong>
+                    Use the line of best fit to predict
+                    the number of runs a team will score
+                    if its on-base percentage is
+                    <strong>32.2</strong>.
+                </p>
+
+            </div>
+
+            <p class="hint">
+                <strong>Before you begin:</strong>
+                Enter the 15 on-base percentages into L1
+                and the corresponding runs scored into L2.
+                Keep each team's two values in the same row.
+            </p>
+
+            <button type="button"
+                    onclick="startTutorial()">
+                Begin TI-84 Plus CE Tutorial →
+            </button>
+
+        </div>
+
+        <div>
+
+            <h3>Data from Example 3 / Example 4</h3>
+
+            <table class="dataset">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Team</th>
+                        <th scope="col">L1: x (%)</th>
+                        <th scope="col">L2: y (runs)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Arizona</td>
+                        <td>32.9</td>
+                        <td>812</td>
+                    </tr>
+                    <tr>
+                        <td>Atlanta</td>
+                        <td>32.6</td>
+                        <td>732</td>
+                    </tr>
+                    <tr>
+                        <td>Chicago Cubs</td>
+                        <td>33.8</td>
+                        <td>822</td>
+                    </tr>
+                    <tr>
+                        <td>Cincinnati</td>
+                        <td>32.9</td>
+                        <td>753</td>
+                    </tr>
+                    <tr>
+                        <td>Colorado</td>
+                        <td>33.8</td>
+                        <td>824</td>
+                    </tr>
+                    <tr>
+                        <td>LA Dodgers</td>
+                        <td>33.4</td>
+                        <td>770</td>
+                    </tr>
+                    <tr>
+                        <td>Miami</td>
+                        <td>33.1</td>
+                        <td>778</td>
+                    </tr>
+                    <tr>
+                        <td>Milwaukee</td>
+                        <td>32.2</td>
+                        <td>732</td>
+                    </tr>
+                    <tr>
+                        <td>NY Mets</td>
+                        <td>32.0</td>
+                        <td>735</td>
+                    </tr>
+                    <tr>
+                        <td>Philadelphia</td>
+                        <td>31.5</td>
+                        <td>690</td>
+                    </tr>
+                    <tr>
+                        <td>Pittsburgh</td>
+                        <td>31.8</td>
+                        <td>668</td>
+                    </tr>
+                    <tr>
+                        <td>San Diego</td>
+                        <td>29.9</td>
+                        <td>604</td>
+                    </tr>
+                    <tr>
+                        <td>San Francisco</td>
+                        <td>30.9</td>
+                        <td>639</td>
+                    </tr>
+                    <tr>
+                        <td>St. Louis</td>
+                        <td>33.4</td>
+                        <td>761</td>
+                    </tr>
+                    <tr>
+                        <td>Washington</td>
+                        <td>33.2</td>
+                        <td>819</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+            <p style="font-size:13px;color:#52647a">
+                Source noted in the original textbook slide:
+                espn.com (2017 data).
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- INTERACTIVE TUTORIAL -->
+
+<div id="tutorial" hidden>
+
+    <p id="counter"
+       class="stepcount"
+       aria-live="polite">
+    </p>
+
+    <div class="layout">
+
+        <section class="panel">
+
+            <div class="eyebrow">
+                GUIDED PRACTICE • EXAMPLE 4
+            </div>
+
+            <p style="font-size:15px;color:#52647a">
+                Goal: Find and graph the line of best fit,
+                interpret its slope, and predict runs at x = 32.2.
+            </p>
+
+            <h2 id="title"></h2>
+
+            <p id="question" class="instruction"></p>
+
+            <div class="eyebrow">
+                ACTION → SCREEN RESPONSE → CHECK
+            </div>
+
+            <ol class="hint" id="instruction"></ol>
+
+            <p>
+                <strong>1.</strong>
+                Follow the numbered action instructions
+                on your physical TI-84 calculator.
+            </p>
+
+            <p>
+                <strong>2.</strong>
+                Compare your calculator screen with
+                the simulated display at right.
+                Yellow outlines identify relevant calculator keys.
+            </p>
+
+            <p>
+                <strong>3.</strong>
+                Answer the checkpoint question below
+                and select <strong>Check answer</strong>.
+            </p>
+
+            <p>
+                The calculator illustration shows the
+                expected screen response. It is a guided
+                visual reference, not a working calculator emulator.
+            </p>
+
+            <p id="pressed" aria-live="polite"></p>
+
+            <label for="answer"
+                   id="ask"
+                   style="font-weight:bold;
+                          display:block;
+                          margin:16px 0 8px">
+            </label>
+
+            <input id="answer"
+                   autocomplete="off"
+                   aria-describedby="answerHelp">
+
+            <p id="answerHelp"
+               style="font-size:14px;
+                      color:#52647a;
+                      margin:7px 0">
+            </p>
+
+            <p>
+                <button class="check"
+                        onclick="check()">
+                    Check answer
+                </button>
+            </p>
+
+            <p id="feedback"
+               class="feedback"
+               aria-live="polite">
+            </p>
+
+        </section>
+
+        <!-- CALCULATOR -->
+
+        <section class="panel">
+
+            <div class="calc"
+                 aria-label="TI-84 Plus CE calculator illustration">
+
+                <div class="brand">
+                    TI-84 Plus CE
+                    <small>COLOR EDITION</small>
+                </div>
+
+                <div class="screen">
+
+                    <div class="status">
+                        NORMAL FLOAT AUTO REAL RADIAN
+                    </div>
+
+                    <div id="screenText"
+                         aria-live="polite">
+                    </div>
+
+                </div>
+
+                <div id="keys" class="keys"></div>
+
+            </div>
+
+            <p style="font-size:13px;text-align:center">
+                TI-84 Plus CE guided calculator illustration.
+                Menu screens may differ slightly depending
+                on the calculator's operating-system version.
+            </p>
+
+        </section>
+
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav class="controls"
+         aria-label="Tutorial navigation">
+
+        <button class="nav"
+                id="prev"
+                onclick="move(-1)">
+            ← Previous Step
+        </button>
+
+        <button class="nav"
+                id="next"
+                onclick="move(1)">
+            Next Step →
+        </button>
+
+    </nav>
+
+</div>
+
+<details id="reference" hidden>
+
+    <summary>
+        View the complete baseball data table
+    </summary>
+
+    <div id="referenceTable"></div>
+
+</details>
+
+</main>
+
+<!-- COPYRIGHT INFORMATION -->
+
+<footer style="text-align:center;
+               padding:24px;
+               line-height:1.5">
+
+    <strong>
+        &copy; 2026 Dr. Fitzroy Farquharson,
+        Valencia College. All Rights Reserved.
+    </strong>
+
+    <br>
+
+    Educational tutorial for authorized course use.
+    Original textbook data attribution retained above.
+
+</footer>
+
+<script>
+
+/* =========================================
+   TUTORIAL SCREENS AND CHECKPOINT QUESTIONS
+   ========================================= */
+
+const data = [
+
+    /* SCREEN 1 */
+
+    {
+        title: "Open the STAT menu",
+
+        question: "Press the physical STAT key.",
+
+        keys: ["STAT"],
+
+        screen:
+            "STAT  EDIT  CALC  TESTS\n" +
+            ">1:Edit\n" +
+            " 2:SortA(\n" +
+            " 3:SortD(\n" +
+            " 4:ClrList\n" +
+            " 5:SetUpEditor",
+
+        steps: [
+            "Locate the STAT key on your calculator.",
+            "Press STAT.",
+            "Verify that the EDIT menu appears.",
+            "Locate the first option, 1:Edit."
+        ],
+
+        ask:
+            "Which numbered menu option opens the list editor?",
+
+        answer: "1:Edit",
+
+        help:
+            "Enter the menu number or name."
+    },
+
+    /* SCREEN 2 */
+
+    {
+        title: "Open the list editor",
+
+        question:
+            "Press ENTER while 1:Edit is selected.",
+
+        keys: [
+            "ENTER",
+            "CLEAR",
+            "↑",
+            "↓",
+            "◀",
+            "▶"
+        ],
+
+        screen:
+            "   L1      L2      L3\n" +
+            "-----------------------\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "L1(1)=",
+
+        steps: [
+            "Press ENTER while 1:Edit is selected.",
+            "Locate the column headings L1, L2 and L3.",
+            "If old data are present, move the cursor to the L1 heading.",
+            "Press CLEAR, then ENTER to clear the list.",
+            "Repeat the same procedure for L2.",
+            "Do not press DEL on a list heading."
+        ],
+
+        ask:
+            "Which two column headings will you use for " +
+            "on-base percentage (x) and runs scored (y)?",
+
+        answer: "L1 and L2",
+
+        help:
+            "Enter the two list names."
+    },
+
+    /* SCREEN 3 */
+
+    {
+        title: "Enter the first paired values",
+
+        question:
+            "Enter the first ordered pair into L1 and L2.",
+
+        keys: [
+            "3","2",".","9","8","1",
+            "ENTER","◀","▶","↑"
+        ],
+
+        screen:
+            "   L1      L2      L3\n" +
+            "-----------------------\n" +
+            "   32.9    812     ---\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "   ---     ---     ---\n" +
+            "L2(2)=",
+
+        steps: [
+            "Move the cursor to the first row of L1.",
+            "Enter 32.9 and press ENTER.",
+            "Move the cursor to the first row of L2.",
+            "Enter 812 and press ENTER.",
+            "Verify that both values are in row 1."
+        ],
+
+        ask:
+            "What is the first ordered pair?",
+
+        answer: "(32.9, 812)",
+
+        help:
+            "Enter the ordered pair in the form (x, y)."
+    },
+
+    /* SCREEN 4 */
+
+    {
+        title: "Complete both data lists",
+
+        question:
+            "Enter all remaining data pairs.",
+
+        keys: [
+            "ENTER","↑","↓","◀","▶"
+        ],
+
+        screen:
+            "   L1      L2      L3\n" +
+            "-----------------------\n" +
+            "   32.9    812     ---\n" +
+            "   32.6    732     ---\n" +
+            "   33.8    822     ---\n" +
+            "    ...    ...     ...\n" +
+            "   33.4    761     ---\n" +
+            "   33.2    819     ---",
+
+        steps: [
+            "Open the complete baseball data table below.",
+            "Enter the remaining on-base percentages into L1.",
+            "Enter the corresponding runs scored into L2.",
+            "Press ENTER after each value.",
+            "Keep the two values for each team in the same row.",
+            "Verify that each list contains exactly 15 values."
+        ],
+
+        ask:
+            "How many values must be in each list?",
+
+        answer: "15",
+
+        help:
+            "Enter a whole number."
+    },
+
+    /* SCREEN 5 */
+
+    {
+        title: "Verify your data",
+
+        question:
+            "Check the first, middle and last ordered pairs.",
+
+        keys: ["↑","↓","◀","▶"],
+
+        screen:
+            "   L1      L2      L3\n" +
+            "-----------------------\n" +
+            "   32.9    812     ---\n" +
+            "    ...    ...     ...\n" +
+            "   32.2    732     ---\n" +
+            "    ...    ...     ...\n" +
+            "   33.2    819     ---",
+
+        steps: [
+            "Use the arrow keys to move through L1 and L2.",
+            "Compare row 1 with Arizona's data.",
+            "Compare row 8 with Milwaukee's data.",
+            "Compare row 15 with Washington's data.",
+            "Correct any errors before continuing."
+        ],
+
+        ask:
+            "What is the ordered pair for Milwaukee (row 8)?",
+
+        answer: "(32.2, 732)",
+
+        help:
+            "Enter the ordered pair (x, y)."
+    },
+
+    /* SCREEN 6 */
+
+    {
+        title: "Configure the scatter plot",
+
+        question:
+            "Turn on Plot1 and select the correct lists.",
+
+        keys: [
+            "2nd","Y=","1","2",
+            "ENTER","↑","↓","◀","▶"
+        ],
+
+        screen:
+            "Plot1\n" +
+            " On    Off\n" +
+            "Type: Scatter\n" +
+            "Xlist: L1\n" +
+            "Ylist: L2\n" +
+            "Mark:  □  +  ·",
+
+        steps: [
+            "Press Y= and deselect any previously active equations.",
+            "Press 2nd, then Y= to open STAT PLOT.",
+            "Turn off Plot2 and Plot3 if necessary.",
+            "Select 1:Plot1 and press ENTER.",
+            "Highlight On and press ENTER.",
+            "Select the first plot type, Scatter.",
+            "Set Xlist to L1 by pressing 2nd, then 1.",
+            "Set Ylist to L2 by pressing 2nd, then 2."
+        ],
+
+        ask:
+            "Which list should be assigned to Ylist " +
+            "for runs scored?",
+
+        answer: "L2",
+
+        help:
+            "Enter the list name."
+    },
+
+    /* SCREEN 7 */
+
+    {
+        title: "Display the scatter plot",
+
+        question:
+            "Use ZoomStat to display the statistical data.",
+
+        keys: ["ZOOM","9"],
+
+        screen:
+            "ZOOM\n" +
+            "9:ZoomStat",
+
+        steps: [
+            "Press ZOOM.",
+            "Select 9:ZoomStat.",
+            "Wait for the scatter plot to appear.",
+            "Observe the positive, approximately linear relationship."
+        ],
+
+        ask:
+            "Which numbered ZOOM menu option " +
+            "automatically fits the window to the statistical data?",
+
+        answer: "9",
+
+        help:
+            "Enter the menu option number."
+    },
+
+    /* SCREEN 8 */
+
+    {
+        title: "Enable diagnostics",
+
+        question:
+            "Enable the correlation statistics r and r².",
+
+        keys: [
+            "2nd","0","↑","↓","ENTER"
+        ],
+
+        screen:
+            "DiagnosticOn\n" +
+            "                 Done",
+
+        steps: [
+            "Press 2nd.",
+            "Press 0 to open CATALOG.",
+            "Scroll down until DiagnosticOn is highlighted.",
+            "Press ENTER to place DiagnosticOn on the home screen.",
+            "Press ENTER again to execute the command.",
+            "Verify that Done appears on the calculator screen."
+        ],
+
+        ask:
+            "Which command enables r and r²?",
+
+        answer: "DiagnosticOn",
+
+        help:
+            "Enter the command name, not Done or ENTER. " +
+            "Capitalization and spaces do not matter."
+    },
+
+    /* SCREEN 9 */
+
+    {
+        title: "Calculate linear regression",
+
+        question:
+            "Find the equation of the line of best fit.",
+
+        keys: [
+            "STAT","▶","4","ENTER"
+        ],
+
+        screen:
+            "LinReg(ax+b)\n" +
+            " y=ax+b\n" +
+            " a=57.34554128\n" +
+            " b=-1120.747788\n" +
+            " r²=.882277341\n" +
+            " r=.939296194",
+
+        steps: [
+            "Press STAT.",
+            "Press the right arrow to select CALC.",
+            "Select 4:LinReg(ax+b).",
+            "Set Xlist to L1.",
+            "Set Ylist to L2.",
+            "Leave FreqList blank.",
+            "Highlight Calculate and press ENTER.",
+            "Identify the values of a, b, r² and r."
+        ],
+
+        ask:
+            "What is the slope rounded to two decimal places?",
+
+        answer: "57.35",
+
+        help:
+            "The slope is represented by a."
+    },
+
+    /* SCREEN 10 */
+
+    {
+        title: "Store and graph the regression equation",
+
+        question:
+            "Store the regression equation in Y1.",
+
+        keys: [
+            "STAT","▶","4","VARS",
+            "1","ENTER","GRAPH"
+        ],
+
+        screen:
+            "LinReg(ax+b)\n" +
+            "Xlist: L1\n" +
+            "Ylist: L2\n" +
+            "Store RegEQ: Y1",
+
+        steps: [
+            "Press STAT and move to CALC.",
+            "Select 4:LinReg(ax+b).",
+            "Set Xlist=L1 and Ylist=L2.",
+            "Leave FreqList blank.",
+            "Move the cursor to Store RegEQ.",
+            "Press VARS.",
+            "Press the right arrow to select Y-VARS.",
+            "Select 1:Function.",
+            "Select 1:Y1.",
+            "Highlight Calculate and press ENTER.",
+            "Press GRAPH to display the regression line over the scatter plot."
+        ],
+
+        ask:
+            "Where is the regression equation stored?",
+
+        answer: "Y1",
+
+        help:
+            "Enter the equation slot name."
+    },
+
+    /* SCREEN 11 */
+
+    {
+        title: "Interpret the slope",
+
+        question:
+            "Explain the meaning of the slope in context.",
+
+        keys: [],
+
+        screen:
+            "LinReg(ax+b)\n" +
+            " y=ax+b\n" +
+            " a=57.34554128\n" +
+            " b=-1120.747788\n" +
+            " r²=.882277341\n" +
+            " r=.939296194",
+
+        steps: [
+            "Identify the coefficient a in the regression output.",
+            "Round the slope to two decimal places.",
+            "For every one-percentage-point increase in on-base percentage, the predicted number of runs increases by approximately 57.35."
+        ],
+
+        ask:
+            "What is the slope of the regression line, " +
+            "rounded to two decimal places?",
+
+        answer: "57.35",
+
+        help:
+            "Use the coefficient a, not b."
+    },
+
+    /* SCREEN 12 */
+
+    {
+        title: "Make a prediction",
+
+        question:
+            "Predict the number of runs when x = 32.2.",
+
+        keys: [
+            "2nd","MODE","VARS","▶",
+            "1","3","2",".","(",")","ENTER"
+        ],
+
+        screen:
+            "Y1(32.2)\n" +
+            "            725.7786412",
+
+        steps: [
+            "Press 2nd, then MODE (QUIT) to return to the home screen.",
+            "Press VARS.",
+            "Press the right arrow to select Y-VARS.",
+            "Select 1:Function.",
+            "Select 1:Y1.",
+            "Type (32.2) after Y1.",
+            "Press ENTER.",
+            "Round the prediction to the nearest whole number of runs."
+        ],
+
+        ask:
+            "How many runs are predicted when x = 32.2, " +
+            "rounded to the nearest whole run?",
+
+        answer: "726",
+
+        help:
+            "Enter the nearest whole number."
+    }
+
+];
+
+/* =========================================
+   CALCULATOR KEYBOARD
+   ========================================= */
+
+const rows = [
+
+    ["Y=","WINDOW","ZOOM","TRACE","GRAPH"],
+
+    ["2nd","MODE","DEL","↑","↓"],
+
+    ["ALPHA","X,T,θ,n","STAT","◀","▶"],
+
+    ["MATH","APPS","PRGM","VARS","CLEAR"],
+
+    ["x⁻¹","SIN","COS","TAN","^"],
+
+    ["x²",",","(",")","÷"],
+
+    ["LOG","7","8","9","×"],
+
+    ["LN","4","5","6","−"],
+
+    ["STO→","1","2","3","+"],
+
+    ["ON","0",".","(-)","ENTER"]
+
+];
+
+const secondaryLabels = {
+
+    "Y=": "STAT PLOT",
+    "WINDOW": "TBLSET",
+    "ZOOM": "FORMAT",
+    "TRACE": "CALC",
+    "GRAPH": "TABLE",
+    "MODE": "QUIT",
+    "0": "CATALOG",
+    "1": "L1",
+    "2": "L2",
+    "3": "L3",
+    "4": "L4",
+    "5": "L5",
+    "6": "L6",
+    "STAT": "LIST",
+    "SIN": "SIN⁻¹",
+    "COS": "COS⁻¹",
+    "TAN": "TAN⁻¹",
+    "x²": "√",
+    "LOG": "10ˣ",
+    "LN": "eˣ",
+    "ON": "OFF"
+
+};
+
+let i = 0;
+
+let pressed = [];
+
+const saved = {};
+
+const $ = id => document.getElementById(id);
+
+/* =========================================
+   CALCULATOR SCREEN DISPLAY
+   ========================================= */
+
+function renderScreen(s) {
+
+    const target = $("screenText");
+
+    target.textContent = s.screen;
+
+    if (i !== 6 && i !== 9) {
+        return;
+    }
+
+    const ns = "http://www.w3.org/2000/svg";
+
+    const svg = document.createElementNS(ns,"svg");
+
+    svg.setAttribute("viewBox","0 0 280 155");
+
+    svg.setAttribute("role","img");
+
+    svg.setAttribute(
+        "aria-label",
+        i === 6
+            ? "Scatter plot showing a positive association"
+            : "Scatter plot with fitted regression line"
+    );
+
+    function add(tag,attrs) {
+
+        const element =
+            document.createElementNS(ns,tag);
+
+        Object.entries(attrs).forEach(([k,v]) => {
+            element.setAttribute(k,v);
+        });
+
+        svg.appendChild(element);
+
+        return element;
+    }
+
+    const X = x => 12 + (x - 29) * 48;
+
+    const Y = y => 145 - (y - 550) * .43;
+
+    add("path",{
+        d: "M12 5 V145 H270",
+        stroke: "#8791a2",
+        fill: "none"
+    });
+
+    document.querySelectorAll(
+        ".dataset tbody tr"
+    ).forEach(row => {
+
+        const x =
+            Number(row.cells[1].textContent);
+
+        const y =
+            Number(row.cells[2].textContent);
+
+        add("rect",{
+
+            x: X(x) - 2,
+
+            y: Y(y) - 2,
+
+            width: 4,
+
+            height: 4,
+
+            fill: "#174fc1"
+
+        });
+
+    });
+
+    if (i === 9) {
+
+        add("line",{
+
+            x1: X(29.5),
+
+            y1: Y(
+                57.34554128 * 29.5 - 1120.747788
+            ),
+
+            x2: X(34),
+
+            y2: Y(
+                57.34554128 * 34 - 1120.747788
+            ),
+
+            stroke: "#c52e35",
+
+            "stroke-width": 2
+
+        });
+
+    }
+
+    target.textContent = "";
+
+    target.appendChild(svg);
+
+}
+
+/* =========================================
+   DISPLAY THE CURRENT TUTORIAL STEP
+   ========================================= */
+
+function draw() {
+
+    const s = data[i];
+
+    $("counter").textContent =
+        `Screen ${i + 1} of ${data.length}`;
+
+    $("title").textContent = s.title;
+
+    $("question").textContent = s.question;
+
+    $("instruction").replaceChildren(
+
+        ...s.steps.map(text => {
+
+            const li = document.createElement("li");
+
+            li.textContent = text;
+
+            return li;
+
+        })
+
+    );
+
+    renderScreen(s);
+
+    $("ask").textContent = s.ask;
+
+    $("answer").value =
+        saved[i]?.value || "";
+
+    $("answerHelp").textContent =
+        s.help || "Type your answer below.";
+
+    $("answer").placeholder =
+        "Type your answer here";
+
+    $("feedback").textContent =
+        saved[i]?.feedback || "";
+
+    $("feedback").className =
+        saved[i]?.className || "feedback";
+
+    $("pressed").textContent = "";
+
+    pressed = [];
+
+    $("prev").disabled = false;
+
+    $("next").disabled =
+        i === data.length - 1;
+
+    document.querySelectorAll(".key").forEach(b => {
+
+        b.classList.toggle(
+            "active",
+            s.keys.includes(b.dataset.key)
+        );
+
+        b.classList.remove("pressed");
+
+    });
+
+}
+
+/* =========================================
+   CALCULATOR KEY SELECTION
+   ========================================= */
+
+function pressKey(b) {
+
+    pressed.push(b.dataset.key);
+
+    b.classList.add("pressed");
+
+    $("pressed").textContent =
+        "Selected keys: " + pressed.join(" → ");
+
+}
+
+/* =========================================
+   ANSWER NORMALIZATION
+   ========================================= */
+
+function normalize(value) {
+
+    return value.normalize("NFKC")
+        .toLowerCase()
+        .replace(
+            /[\s\u200b\u200c\u200d\ufeff]/g,
+            ""
+        )
+        .replace(/−/g,"-");
+
+}
+
+/* =========================================
+   CHECKPOINT ANSWER VALIDATION
+   ========================================= */
+
+function valid(i,value) {
+
+    const v = normalize(value);
+
+    if (!v) {
+        return false;
+    }
+
+    const aliases = {
+
+        0: [
+            "1",
+            "edit",
+            "1edit",
+            "1:edit"
+        ],
+
+        1: [
+            "l1andl2",
+            "l1,l2",
+            "l1&l2",
+            "l1/l2",
+            "l1l2"
+        ],
+
+        5: [
+            "l2",
+            "ylist=l2"
+        ],
+
+        6: [
+            "9",
+            "zoomstat",
+            "9:zoomstat",
+            "9zoomstat"
+        ],
+
+        7: [
+            "diagnosticon",
+            "diagnosticon:done"
+        ],
+
+        9: [
+            "y1",
+            "storeregeq=y1"
+        ]
+
+    };
+
+    if (aliases[i]) {
+
+        return aliases[i].includes(v);
+
+    }
+
+    /* Validate ordered pairs */
+
+    if (i === 2 || i === 4) {
+
+        const pair = value.normalize("NFKC")
+            .trim()
+            .replace(/^[([]|[)\]]$/g,"")
+            .split(/[,;]|\s+/)
+            .filter(Boolean);
+
+        return pair.length === 2 &&
+
+            pair.every(
+                x => /^\d+(?:\.\d+)?$/.test(x)
+            ) &&
+
+            Number(pair[0]) ===
+                (i === 2 ? 32.9 : 32.2) &&
+
+            Number(pair[1]) ===
+                (i === 2 ? 812 : 732);
+
+    }
+
+    /* Validate numerical answers */
+
+    const n = v.replace(/runs?$/,"");
+
+    return /^[-+]?\d+(?:\.\d+)?$/.test(n) &&
+
+        Number(n) === Number(data[i].answer);
+
+}
+
+/* =========================================
+   CHECK ANSWER AND DISPLAY FEEDBACK
+   ========================================= */
+
+function check() {
+
+    const value = $("answer").value;
+
+    const ok = valid(i,value);
+
+    const feedback = ok
+
+        ? (
+            i === data.length - 1
+                ? "Correct! You have reached the final checkpoint."
+                : "Correct. Continue when ready."
+          )
+
+        : !value.trim()
+
+            ? "Enter an answer in the box first."
+
+            : "Not quite. " +
+              (
+                data[i].help ||
+                "Compare the screen with the question."
+              ) +
+              " Try again.";
+
+    $("feedback").textContent = feedback;
+
+    $("feedback").className =
+        "feedback " + (ok ? "correct" : "wrong");
+
+    saved[i] = {
+
+        value,
+
+        feedback,
+
+        className: $("feedback").className
+
+    };
+
+}
+
+/* =========================================
+   BEGIN TUTORIAL
+   ========================================= */
+
+function startTutorial() {
+
+    $("intro").hidden = true;
+
+    $("tutorial").hidden = false;
+
+    $("reference").hidden = false;
+
+    i = 0;
+
+    draw();
+
+    window.scrollTo(0,0);
+
+}
+
+/* =========================================
+   PREVIOUS AND NEXT STEP NAVIGATION
+   ========================================= */
+
+function move(n) {
+
+    saved[i] = {
+
+        ...(saved[i] || {}),
+
+        value: $("answer").value
+
+    };
+
+    if (i === 0 && n < 0) {
+
+        $("tutorial").hidden = true;
+
+        $("intro").hidden = false;
+
+        $("reference").hidden = true;
+
+        window.scrollTo(0,0);
+
+        return;
+
+    }
+
+    i = Math.max(
+
+        0,
+
+        Math.min(data.length - 1,i + n)
+
+    );
+
+    draw();
+
+    window.scrollTo(0,0);
+
+}
+
+/* =========================================
+   INITIALIZE TUTORIAL
+   ========================================= */
+
+window.addEventListener("DOMContentLoaded",() => {
+
+    $("referenceTable").appendChild(
+
+        document.querySelector(".dataset")
+            .cloneNode(true)
+
+    );
+
+    $("answer").addEventListener("keydown",e => {
+
+        if (e.key === "Enter") {
+
+            e.preventDefault();
+
+            check();
+
+        }
+
+    });
+
+    const holder = $("keys");
+
+    rows.forEach((row,r) => {
+
+        row.forEach(k => {
+
+            const b = document.createElement("button");
+
+            b.type = "button";
+
+            b.className = "key " +
+
+                (
+                    r === 0
+
+                        ? "top "
+
+                        : k === "2nd"
+
+                            ? "blue "
+
+                            : k === "ALPHA"
+
+                                ? "green "
+
+                                : ""
+                );
+
+            b.textContent = k;
+
+            b.dataset.key = k;
+
+            b.setAttribute(
+                "aria-label",
+                "Calculator key " + k
+            );
+
+            b.onclick = () => pressKey(b);
+
+            const cell =
+                document.createElement("div");
+
+            cell.className = "keycell";
+
+            const label =
+                document.createElement("span");
+
+            label.className = "keylabel";
+
+            label.textContent =
+                secondaryLabels[k] || " ";
+
+            cell.appendChild(label);
+
+            if (/^[0-9.]$/.test(k)) {
+
+                b.classList.add("num");
+
+            }
+
+            if (["↑","↓","◀","▶"].includes(k)) {
+
+                b.classList.add("arrow");
+
+            }
+
+            if (!k) {
+
+                b.classList.add("blank");
+
+                b.disabled = true;
+
+            }
+
+            cell.appendChild(b);
+
+            holder.appendChild(cell);
+
+        });
+
+    });
+
+    draw();
+
+});
+
+</script>
+
+</body>
+</html>
